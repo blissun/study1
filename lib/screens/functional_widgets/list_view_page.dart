@@ -13,19 +13,40 @@ class ListViewPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('기본 ListView:'),
-            const SizedBox(height: 10),
-            SizedBox(
-              height: 100,
-              child: ListView(
+            const Card(
+              margin: EdgeInsets.all(16.0),
+              child: Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'ListView 위젯의 특징:',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text('• 스크롤 가능한 목록을 만드는 위젯'),
+                    Text('• ListView.builder: 필요할 때만 아이템을 생성'),
+                    Text('• ListView.separated: 아이템 사이에 구분자 추가'),
+                    Text('• 수직/수평 스크롤 모두 지원'),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                children: List.generate(
-                  10,
-                  (index) => Container(
+                itemCount: 10,
+                separatorBuilder: (context, index) {
+                  return const SizedBox(width: 10);
+                },
+                itemBuilder: (context, index) {
+                  return Container(
                     width: 100,
-                    margin: const EdgeInsets.only(right: 10),
                     color: Colors.primaries[index % Colors.primaries.length],
                     child: Center(
                       child: Text(
@@ -33,8 +54,8 @@ class ListViewPage extends StatelessWidget {
                         style: const TextStyle(color: Colors.white),
                       ),
                     ),
-                  ),
-                ),
+                  );
+                },
               ),
             ),
             const SizedBox(height: 20),

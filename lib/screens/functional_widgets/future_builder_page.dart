@@ -27,11 +27,34 @@ class FutureBuilderPage extends StatelessWidget {
         title: const Text('FutureBuilder 위젯'),
         centerTitle: true,
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const Card(
+              child: Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'FutureBuilder 위젯의 특징:',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text('• 비동기 데이터를 처리하는 위젯'),
+                    Text('• Future의 상태에 따라 UI 업데이트'),
+                    Text('• 로딩, 에러, 데이터 상태 처리'),
+                    Text('• 네트워크 요청, 파일 읽기 등에 유용'),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 24),
             const Text(
               'FutureBuilder 기본 예제:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),

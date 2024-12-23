@@ -58,6 +58,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('Home Screen build');
     return const Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -84,6 +85,7 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('Search Screen build');
     return const Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
