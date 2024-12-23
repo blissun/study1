@@ -72,6 +72,8 @@ class TextWidgetPage extends StatelessWidget {
               child: const Text(
                 '긴 텍스트가 있을 때 오버플로우를 처리하는 방법입니다.',
                 overflow: TextOverflow.ellipsis,
+                maxLines: 2,
+
               ),
             ),
             gap20,

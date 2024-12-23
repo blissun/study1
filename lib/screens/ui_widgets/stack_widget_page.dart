@@ -50,6 +50,11 @@ class StackWidgetPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
+                  Positioned.fill(
+                    child: ColoredBox(
+                      color: Colors.amberAccent,
+                    ),
+                  ),
                   Positioned(
                     top: 20,
                     left: 20,
