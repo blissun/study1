@@ -31,10 +31,10 @@ class _TextFieldPageState extends State<TextFieldPage> {
         child: Form(
           key: _formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Text('기본 TextField:'),
-              const Spacer(flex: 1),
+              const SizedBox(height: 8),
               TextField(
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
@@ -47,11 +47,11 @@ class _TextFieldPageState extends State<TextFieldPage> {
                   });
                 },
               ),
-              const Spacer(flex: 1),
+              const SizedBox(height: 8),
               Text('입력된 텍스트: $_inputText'),
-              const Spacer(flex: 2),
+              const SizedBox(height: 16),
               const Text('비밀번호 TextField:'),
-              const Spacer(flex: 1),
+              const SizedBox(height: 8),
               TextField(
                 obscureText: _isObscure,
                 decoration: InputDecoration(
@@ -69,9 +69,9 @@ class _TextFieldPageState extends State<TextFieldPage> {
                   ),
                 ),
               ),
-              const Spacer(flex: 2),
+              const SizedBox(height: 16),
               const Text('유효성 검사가 있는 TextField:'),
-              const Spacer(flex: 1),
+              const SizedBox(height: 8),
               TextFormField(
                 controller: _textController,
                 decoration: const InputDecoration(
@@ -90,7 +90,7 @@ class _TextFieldPageState extends State<TextFieldPage> {
                   return null;
                 },
               ),
-              const Spacer(flex: 2),
+              const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {

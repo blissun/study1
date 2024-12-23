@@ -6,6 +6,9 @@ import 'functional_widgets/list_view_page.dart';
 import 'functional_widgets/text_field_page.dart';
 import 'functional_widgets/animated_container_page.dart';
 import 'functional_widgets/future_builder_page.dart';
+import 'functional_widgets/text_field_difference_page.dart';
+import 'functional_widgets/form_widget_page.dart';
+import 'functional_widgets/overlay_widget_page.dart';
 
 class FunctionalWidgetsPage extends StatelessWidget {
   const FunctionalWidgetsPage({super.key});
@@ -75,6 +78,27 @@ class FunctionalWidgetsPage extends StatelessWidget {
             Icons.update,
             context,
             const FutureBuilderPage(),
+          ),
+          _buildWidgetCard(
+            'TextField vs TextFormField',
+            'TextField와 TextFormField의 차이점 이해하기',
+            Icons.compare_arrows,
+            context,
+            const TextFieldDifferencePage(),
+          ),
+          _buildWidgetCard(
+            'Form 위젯',
+            'Form을 사용한 입력 양식 만들기',
+            Icons.assignment,
+            context,
+            const FormWidgetPage(),
+          ),
+          _buildWidgetCard(
+            'Overlay 위젯',
+            '화면 최상단에 위젯 표시하기',
+            Icons.layers,
+            context,
+            const OverlayWidgetPage(),
           ),
         ],
       ),
