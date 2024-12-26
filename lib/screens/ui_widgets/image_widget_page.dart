@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ImageWidgetPage extends StatelessWidget {
@@ -20,8 +21,8 @@ class ImageWidgetPage extends StatelessWidget {
           children: [
             const Text('네트워크 이미지:'),
             const SizedBox(height: 10),
-            Image.network(
-              wideImageUrl,
+            CachedNetworkImage(
+              imageUrl: wideImageUrl,
               width: double.infinity,
               // height: 200,
               fit: BoxFit.cover,
@@ -39,8 +40,8 @@ class ImageWidgetPage extends StatelessWidget {
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey),
                         ),
-                        child: Image.network(
-                          wideImageUrl,
+                        child: CachedNetworkImage(
+                          imageUrl: wideImageUrl,
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -57,8 +58,8 @@ class ImageWidgetPage extends StatelessWidget {
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey),
                         ),
-                        child: Image.network(
-                          wideImageUrl,
+                        child: CachedNetworkImage(
+                          imageUrl: wideImageUrl,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -73,8 +74,8 @@ class ImageWidgetPage extends StatelessWidget {
             const SizedBox(height: 10),
             Center(
               child: ClipOval(
-                child: Image.network(
-                  squareImageUrl,
+                child: CachedNetworkImage(
+                  imageUrl: squareImageUrl,
                   width: 150,
                   height: 150,
                   fit: BoxFit.cover,
@@ -88,7 +89,7 @@ class ImageWidgetPage extends StatelessWidget {
                 width: 150,
                 height: 150,
                 child: CircleAvatar(
-                  backgroundImage: NetworkImage(squareImageUrl),
+                  backgroundImage: CachedNetworkImageProvider(squareImageUrl),
                 ),
               ),
             ),

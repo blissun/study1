@@ -20,6 +20,12 @@ class _TextFieldPageState extends State<TextFieldPage> {
   }
 
   @override
+  void initState() {
+    
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -36,6 +42,7 @@ class _TextFieldPageState extends State<TextFieldPage> {
               const Text('기본 TextField:'),
               const SizedBox(height: 8),
               TextField(
+                controller: _textController,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: '기본 입력',

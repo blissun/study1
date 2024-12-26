@@ -23,6 +23,7 @@ class _BasicScaffoldPageState extends State<BasicScaffoldPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         title: const Text('기본 Scaffold'),
         centerTitle: true,
